@@ -6,7 +6,7 @@ public class Task {
     protected boolean isDone;
 
     /**
-     * Constructor for the Task class
+     * Constructs a new Task object.
      * @param description String containing the description of the task
      */
     public Task(String description) {
@@ -16,9 +16,7 @@ public class Task {
 
 
     /**
-     * Gets the status icons, depending on whether the task has been completed:
-     * "Y" is returned if the task is completed
-     * "N" is returned if the task is incomplete
+     * Gets the status icons: "Y" is returned if the task is completed, otherwise "N" is returned.
      * @return String for the status icons
      */
     public String getStatusIcon() {
@@ -28,14 +26,14 @@ public class Task {
 
 
     /**
-     * Sets the status of this task to done (Default: not done)
+     * Sets the status of this task to done (Default: not done).
      */
     public void markAsDone() {
         this.isDone = true;
     }
 
     /**
-     * Formats this object as a String to be written into the data file
+     * Formats this object as a String to be written into the data file.
      * @return String in the format isDone:;:description
      */
     public String toDataString() {
@@ -43,8 +41,8 @@ public class Task {
     }
 
     /**
-     * Formats this object as a String to be printed out
-     * @return String
+     * Formats this object as a String to be printed out.
+     * @return String for printing
      */
     @Override
     public String toString() {

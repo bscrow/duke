@@ -1,11 +1,13 @@
 package duke;
 
-import duke.tasks.*;
+import duke.tasks.Deadline;
+import duke.tasks.Event;
+import duke.tasks.ToDo;
 
 public class Parser {
 
     /**
-     * Parses the command the user enters and execute it
+     * Parses the command the user enters and execute it.
      * @param tasks TaskList that stores all the current tasks
      * @param ui UI for interaction with the user
      * @return boolean. true indicates that the user has terminated the program (by typing "bye")
@@ -99,7 +101,7 @@ public class Parser {
                     ui.cathulhuSays("\t  " + String.valueOf(numMatches) + "." + taskString);
                 }
             }
-            if (numMatches==0) {
+            if (numMatches == 0) {
                 ui.cathulhuSays("\t  You have no matching task, mortal.");
             }
 

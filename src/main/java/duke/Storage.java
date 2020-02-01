@@ -7,12 +7,20 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import duke.tasks.*;
+import duke.tasks.Deadline;
+import duke.tasks.Event;
+import duke.tasks.Task;
+import duke.tasks.ToDo;
 
 public class Storage {
 
     private File tasksFile;
 
+    /**
+     * Constructs a new Storage object.
+     * @throws DukeException If the task file directory cannot be found or created.
+     * @throws IOException If the tasksFile cannot be created somehow.
+     */
     public Storage() throws DukeException, IOException {
 
         File tasksFileDirectory = new File(System.getProperty("user.dir") + "/dukeData");
@@ -39,7 +47,7 @@ public class Storage {
 
             String[] taskString = sc.nextLine().split(":;:");
 
-            switch(taskString[0]) {
+            switch (taskString[0]) {
             case "T":
                 Task tdTask = new ToDo(taskString[2]);
                 if (taskString[1].equals("1")) {
@@ -78,7 +86,7 @@ public class Storage {
     }
 
     /**
-     * Writes all Tasks in the TaskList object to the file at the specified file location
+     * Writes all Tasks in the TaskList object to the file at the specified file location.
      * @param tasks TaskList. TaskList object storing all current Tasks.
      * @throws IOException if FileWriter object do not work as expected
      */

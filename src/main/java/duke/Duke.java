@@ -8,9 +8,12 @@ public class Duke {
     private TaskList tasks;
     private Ui ui;
 
+    /**
+     * Constructs a new Duke object.
+     */
     public Duke() {
         ui = new Ui();
-        try{
+        try {
             storage = new Storage();
             this.tasks = storage.loadTasksFile();
         } catch (Exception e) {

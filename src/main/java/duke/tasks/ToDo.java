@@ -3,7 +3,7 @@ package duke.tasks;
 public class ToDo extends Task {
 
     /**
-     * Constructor for the ToDo object, a subclass of Task
+     * Constructs a new ToDo object, a subclass of Task.
      * @param description String containing the description of the task
      */
     public ToDo(String description) {
@@ -12,7 +12,7 @@ public class ToDo extends Task {
 
 
     /**
-     * Formats this object as a String to be written into the data file
+     * Formats this object as a String to be written into the data file.
      * @return String in the format T:;:isDone:;:description
      */
     @Override
@@ -22,8 +22,8 @@ public class ToDo extends Task {
 
 
     /**
-     * Formats this object as a String to be printed out
-     * @return String
+     * Formats this object as a String to be printed out.
+     * @return String for printing
      */
     @Override
     public String toString() {

@@ -1,9 +1,9 @@
 package duke;
 
-public class DukeException extends Exception{
+public class DukeException extends Exception {
 
     /**
-     * Returns exceptions for invalid Duke inputs
+     * Returns exceptions for invalid Duke inputs.
      * @param message String message to be displayed
      */
     public DukeException(String message) {
